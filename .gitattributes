@@ -1,2 +1,6 @@
-# Auto detect text files and perform LF normalization
+# Normalise line endings in the repository; PowerShell scripts keep Windows endings on checkout
 * text=auto
+*.ps1 text eol=crlf
+*.png binary
+*.wav binary
+*.mid binary

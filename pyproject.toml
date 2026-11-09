@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vvc"
+version = "0.1.0"
+description = "Virtual Voice Complaint: speech encoded as MIDI synthesis instructions, and decoded back into intelligible speech."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+# terminal app and microphone recording
+app = ["textual>=4.0", "sounddevice>=0.4"]
+# intelligibility metrics and speech recognition for the experiments
+eval = ["pystoi>=0.3", "openai-whisper>=20231117"]
+all = ["vvc[app,eval]"]
+
+[project.scripts]
+vvc = "vvc.__main__:main"
+
+[tool.setuptools]
+packages = ["vvc"]

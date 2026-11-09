@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Everything VVC generates: encoded .mid files, decoded audio, reports,
+# stress-test audio and listening-test runs (including sealed answer keys)
+out/
+
+# Speech recordings stay local; samples/README.md explains how to create them
+samples/*.wav
+samples/*.txt
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
